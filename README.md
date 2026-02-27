@@ -36,8 +36,10 @@ Short code vasitəsilə istifadəçini original URL-ə yönləndirir və klik sa
 
 Example
 http://localhost/short_url/public/Ab3kL9
-Screenshot
+```
+![Stats Screenshot](docs/images/redirect.png)
 
+```
 3️⃣ Get URL Statistics
 Endpoint
 GET /api/stats/{short_code}
