@@ -24,7 +24,7 @@ url = https://google.com
 {
   "short_url": "http://localhost/short_url/public/Ab3kL9"
 }
-Screenshot
+![Stats Screenshot](docs/images/create.png)
 
 2️⃣ Redirect to Original URL
 Endpoint
