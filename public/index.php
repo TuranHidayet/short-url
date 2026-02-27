@@ -9,7 +9,6 @@ require_once __DIR__ . '/../app/models/Url.php';
 
 $router = new Router();
 
-$router->get('/api/index', 'HomeController@index');
 $router->post('/api/shorten', 'HomeController@store');
 $router->get('/api/stats/{code}', 'HomeController@stats');
 $router->get('/{code}', 'HomeController@redirect');
