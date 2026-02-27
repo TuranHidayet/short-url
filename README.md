@@ -19,12 +19,12 @@ Verilən uzun URL-i qısaldır və unikal short code yaradır.
 url = https://google.com
 
 
+![Stats Screenshot](docs/images/create.png)
 ### Response
 ```json
 {
   "short_url": "http://localhost/short_url/public/Ab3kL9"
 }
-![Stats Screenshot](docs/images/create.png)
 
 2️⃣ Redirect to Original URL
 Endpoint
