@@ -1,48 +1,63 @@
-# 🔗 PHP URL Shortener (Core PHP MVC)
+# PHP URL Shortener (Core PHP)
 
-A simple URL Shortener built with **Core PHP** using a custom **MVC architecture** and custom **Router**.
-
-This project was built without any frameworks (no Laravel, no Symfony) to demonstrate backend fundamentals including:
-
-- Custom Routing
-- MVC Structure
-- PDO Database Connection
-- URL Validation
-- Random Short Code Generation
-- Click Tracking
-- REST-style API Endpoints
+Sadə URL qısaltma sistemi. Core PHP ilə yazılıb, MVC strukturu və custom router istifadə olunub.
 
 ---
 
-## 🚀 Features
+## 1️⃣ Create Short URL
 
-- ✅ Shorten long URLs
-- ✅ Redirect using short code
-- ✅ Click tracking
-- ✅ URL validation
-- ✅ Unique short code generation
-- ✅ Stats endpoint
-- ✅ Custom MVC architecture
-- ✅ No framework used
+### Endpoint
 
----
+POST /api/shorten
 
-## 🛠 Technologies Used
 
-- PHP 8+
-- MySQL
-- PDO
-- Apache (XAMPP)
-- REST-style routing
-- Custom MVC implementation
+### Təsvir
+Verilən uzun URL-i qısaldır və unikal short code yaradır.
 
----
+### Request (x-www-form-urlencoded)
 
-## 🗄 Database Schema
+url = https://google.com
 
-Create the following table:
 
-```sql
+### Response
+```json
+{
+  "short_url": "http://localhost/short_url/public/Ab3kL9"
+}
+Screenshot
+
+2️⃣ Redirect to Original URL
+Endpoint
+GET /{short_code}
+Təsvir
+
+Short code vasitəsilə istifadəçini original URL-ə yönləndirir və klik sayını 1 artırır.
+
+Example
+http://localhost/short_url/public/Ab3kL9
+Screenshot
+
+3️⃣ Get URL Statistics
+Endpoint
+GET /api/stats/{short_code}
+Təsvir
+
+Verilmiş short code üçün:
+
+Original URL-i qaytarır
+
+Click sayını göstərir
+
+Example
+GET /api/stats/Ab3kL9
+Response
+{
+  "url": "https://google.com",
+  "clicks": 5
+}
+Screenshot
+
+Database Structure
 CREATE TABLE short_links (
     id BIGINT AUTO_INCREMENT PRIMARY KEY,
     original_url TEXT NOT NULL,
@@ -51,4 +66,24 @@ CREATE TABLE short_links (
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
-## 🏗 Project Structure
+---
+
+# 📸 README-də Şəkil Necə Yükləmək Olar?
+
+## 1️⃣ Repo daxilində qovluq yarat
+
+GitHub projectində belə struktur yarat:
+
+
+docs/
+└── images/
+
+
+## 2️⃣ Şəkilləri ora at
+
+Məsələn:
+
+
+docs/images/create-short-url.png
+docs/images/redirect.png
+docs/images/stats.png
