@@ -20,6 +20,7 @@ url = https://google.com
 
 
 ![Stats Screenshot](docs/images/create.png)
+
 ### Response
 ```json
 {
