@@ -56,35 +56,6 @@ Response
   "url": "https://google.com",
   "clicks": 5
 }
-Screenshot
+```
+![Stats Screenshot](docs/images/stats.png)
 
-Database Structure
-CREATE TABLE short_links (
-    id BIGINT AUTO_INCREMENT PRIMARY KEY,
-    original_url TEXT NOT NULL,
-    short_code VARCHAR(10) NOT NULL UNIQUE,
-    clicks INT DEFAULT 0,
-    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
-);
-
----
-
-# 📸 README-də Şəkil Necə Yükləmək Olar?
-
-## 1️⃣ Repo daxilində qovluq yarat
-
-GitHub projectində belə struktur yarat:
-
-
-docs/
-└── images/
-
-
-## 2️⃣ Şəkilləri ora at
-
-Məsələn:
-
-
-docs/images/create-short-url.png
-docs/images/redirect.png
-docs/images/stats.png
